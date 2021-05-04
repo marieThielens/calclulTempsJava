@@ -8,7 +8,7 @@ public class Main {
 	// write your code here
         Duree t1 = new Duree(
             5,
-            6,
+            25,
             58,
             125
         );

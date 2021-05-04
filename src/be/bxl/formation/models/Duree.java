@@ -21,7 +21,18 @@ public class Duree {
         return this.secondes;
     }
     public void getTempsTotal(){
-        System.out.println("");
+        if( this.secondes >= 60) {
+            this.minutes++;
+        }
+        if(this.minutes >= 60) {
+            this.heures++;
+        }
+        if (this.heures >= 24) {
+            this.jours++;
+        }
+    }
+    public void dureeAsoustraire(){
+        
     }
     // setters
 
@@ -31,5 +42,6 @@ public class Duree {
     this.heures = heures;
     this.minutes = minutes;
     this.secondes = secondes;
+    getTempsTotal();
     }
 }
