@@ -12,6 +12,12 @@ public class Main {
             58,
             125
         );
-        System.out.println(t1.getJours());
+        Duree t2 = new Duree(
+          1,24, 25, 30
+        );
+
+        System.out.println("Personne 1: " + t1.getTempsTotal());
+        System.out.println("Personne 2: " + t2.getTempsTotal());
+        System.out.println("Temps total: " );
     }
 }

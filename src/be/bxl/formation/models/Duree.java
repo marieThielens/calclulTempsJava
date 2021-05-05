@@ -20,9 +20,14 @@ public class Duree {
     public int getSecondes() {
         return this.secondes;
     }
-    public void getTempsTotal(){
+    public int tempsTotal() {
+        return this.tempsTotal;
+    }
+
+
+    public String getTempsTotal(){
         if( this.secondes >= 60) {
-            this.minutes++;
+            this.secondes++;
         }
         if(this.minutes >= 60) {
             this.heures++;
@@ -30,11 +35,14 @@ public class Duree {
         if (this.heures >= 24) {
             this.jours++;
         }
+        String  tempsFinal =" Il y a " + this.jours + " jours, " + this.heures + " heures " + this.minutes + " minutes " + "et " +this.secondes + " secondes";
+        return tempsFinal;
     }
-    public void dureeAsoustraire(){
-        
-    }
+
     // setters
+    public void setSecondes(int secondes) {
+        this.secondes = secondes;
+    }
 
 // mon constructeur
     public Duree(int jours, int heures, int minutes, int secondes ){
@@ -42,6 +50,7 @@ public class Duree {
     this.heures = heures;
     this.minutes = minutes;
     this.secondes = secondes;
-    getTempsTotal();
     }
+    // surcharge
+
 }
